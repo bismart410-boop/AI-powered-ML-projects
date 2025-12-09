@@ -15,7 +15,7 @@ class AlarmSystem:
             self.active = True
             self.last_intrusion_time = current_time
         else:
-            if self.active and (current_time.time() - self.last_intrusion_time) > self.cooldown:
+            if self.active and (current_time - self.last_intrusion_time) > self.cooldown:
                 self.active = False
     
     def draw(self, frame):
